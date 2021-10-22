@@ -1584,19 +1584,19 @@ case 'gopay':
 but = [
 { buttonId: `${prefix}done`, buttonText: { displayText: 'DONE' }, type: 1 }
 ]
-sendButton(from, "GOPAY : 085157740529 (Mikey)", faketeks, but, mek)
+sendButton(from, "GOPAY : 085697842278 (irfan)", faketeks, but, mek)
 break
 case 'dana':
 but = [
 { buttonId: `${prefix}done`, buttonText: { displayText: 'DONE' }, type: 1 }
 ]
-sendButton(from, "DANA : 08988743499 (Mustakim)", faketeks, but, mek)
+sendButton(from, "DANA : 085697842278 (irfan)", faketeks, but, mek)
 break
 case 'ovo':
 but = [
 { buttonId: `${prefix}done`, buttonText: { displayText: 'DONE' }, type: 1 }
 ]
-sendButton(from, "OVO : 08988743499 (Mustakim)", faketeks, but, mek)
+sendButton(from, "OVO : 085697842278 (irfan)", faketeks, but, mek)
 break
 				
 //━━━━━━━━━━━━━━━[ AKHIR DARI SEMUA FITUR ]━━━━━━━━━━━━━━━━━//

@@ -387,10 +387,7 @@ break
 	✎ ${prefix}character
 	✎ ${prefix}manga
 	✎ ${prefix}anime
-	✎ ${prefix}kusonimesearch
-	✎ ${prefix}otakudesusearch
-	✎ ${prefix}nhentaisearch
-	✎ ${prefix}nekopoisearch
+	
 	
 	✮Information Menu✮
 	✎ ${prefix}kbbi
@@ -443,23 +440,6 @@ break
 	✎ ${prefix}shinobu
 	✎ ${prefix}wallnime
 	✎ ${prefix}megumin
-	✎ ${prefix}chiisaihentai
-	✎ ${prefix}trap
-	✎ ${prefix}blowjob
-	✎ ${prefix}yaoi
-	✎ ${prefix}ecchi
-	✎ ${prefix}hentai
-	✎ ${prefix}ahegao
-	✎ ${prefix}hololewd
-	✎ ${prefix}sideoppai
-	✎ ${prefix}animefeets
-	✎ ${prefix}animebooty
-	✎ ${prefix}animethighss
-	✎ ${prefix}animearmpits
-	✎ ${prefix}hentaifemdom
-	✎ ${prefix}lewdanimegirls
-	✎ ${prefix}biganimetiddies
-	✎ ${prefix}hentai4everyone
 	
 	✮Owner Menu✮
 	✎ ${prefix}owner
@@ -1066,7 +1046,7 @@ ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
 await zeroyt7.sendMessage(from, thumbnail, image, { quoted: ftrol, caption: ini_txt })
 break
-case 'kusonimesearch':
+cas '':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=${zerokey}&query=${query}`)
@@ -1093,7 +1073,7 @@ ini_txt += `${y} - ${link_dl[x][y]}\n`
 ini_buffer = await getBuffer(get_result.thumbnail)
 await zeroyt7.sendMessage(from, ini_buffer, image, { quoted: ftrol, caption: ini_txt })
 break
-case 'otakudesusearch':
+cas '/':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=${zerokey}&query=${query}`)
@@ -1126,7 +1106,7 @@ ini_txt += `${z} - ${down_link[z]}\n`
 }
 reply(ini_txt)
 break
-case 'nhentaisearch':
+cas ':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${zerokey}&query=${query}`)
@@ -1466,40 +1446,14 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR RANDOM IMAGE ]━━━━━━━━━━━━━━━━━//
 
-case 'art':
-case 'bts':
-case 'exo':
-case 'elf':
-case 'loli':
-case 'neko':
-case 'waifu':
-case 'shota':
-case 'husbu':
-case 'sagiri':
-case 'shinobu':
-case 'megumin':
-case 'wallnime':
+
+cas':
 getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${zerokey}`).then((gambar) => {
 zeroyt7.sendMessage(from, gambar, image, { quoted: ftrol })
 })
 break
-case 'chiisaihentai':
-case 'trap':
-case 'blowjob':
-case 'yaoi':
-case 'ecchi':
-case 'hentai':
-case 'ahegao':
-case 'hololewd':
-case 'sideoppai':
-case 'animefeets':
-case 'animebooty':
-case 'animethighss':
-case 'animearmpits':
-case 'hentaifemdom':
-case 'lewdanimegirls':
-case 'biganimetiddies':
-case 'hentai4everyone':
+s':
+casne':
 await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${zerokey}`).then((gambar) => {
 zeroyt7.sendMessage(from, gambar, image, { quoted: ftrol })
 })

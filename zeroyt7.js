@@ -1046,7 +1046,7 @@ ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
 await zeroyt7.sendMessage(from, thumbnail, image, { quoted: ftrol, caption: ini_txt })
 break
-cas '':
+case './':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=${zerokey}&query=${query}`)
@@ -1073,7 +1073,7 @@ ini_txt += `${y} - ${link_dl[x][y]}\n`
 ini_buffer = await getBuffer(get_result.thumbnail)
 await zeroyt7.sendMessage(from, ini_buffer, image, { quoted: ftrol, caption: ini_txt })
 break
-cas '/':
+case '/':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=${zerokey}&query=${query}`)
@@ -1106,7 +1106,7 @@ ini_txt += `${z} - ${down_link[z]}\n`
 }
 reply(ini_txt)
 break
-cas ':
+case ',>':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${zerokey}&query=${query}`)
@@ -1123,7 +1123,7 @@ ini_txt += `Favourite : ${x.favourite}\n\n`
 }
 reply(ini_txt)
 break
-case 'nekopoisearch':
+case '>;':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${zerokey}&query=${query}`)
@@ -1447,13 +1447,13 @@ break
 //━━━━━━━━━━━━━━━[ FITUR RANDOM IMAGE ]━━━━━━━━━━━━━━━━━//
 
 
-cas':
+case '.m':
 getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${zerokey}`).then((gambar) => {
 zeroyt7.sendMessage(from, gambar, image, { quoted: ftrol })
 })
 break
-s':
-casne':
+
+case './':
 await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${zerokey}`).then((gambar) => {
 zeroyt7.sendMessage(from, gambar, image, { quoted: ftrol })
 })
